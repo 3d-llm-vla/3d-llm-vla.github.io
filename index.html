@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D-LLM/VLA Workshop | CVPR 2025</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    </head>
+    <body>
+        <header class="fixed-header">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="imgs/3d_llm_concept.jpg" alt="3D-LLM/VLA Logo"
+                            class="logo-image">
+                        <div class="logo-text">
+                            <h1>3D-LLM/VLA</h1>
+                            <p>CVPR 2025 Workshop</p>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#call">Call for Papers</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#organizers">Organizers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Home/Hero Section -->
+        <section id="home" class="hero">
+            <div id="hero-background"></div>
+            <div class="container">
+                <div class="hero-logo">
+                    <img src="imgs/3d_llm_concept.jpg" alt="3D-LLM/VLA Logo"
+                        class="hero-logo-image">
+                </div>
+                <h2>Bridging Language, Vision and Action in 3D Environments</h2>
+                <p class="centered-subtitle">1st Workshop on 3D-LLM/VLA | CVPR
+                    2025 | Nashville, TN, USA</p>
+                <div class="cta-buttons">
+                    <a href="#call" class="btn primary">Submit Paper</a>
+                    <a href="#schedule" class="btn secondary">View Schedule</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About/Overview Section -->
+        <section id="about" class="overview">
+            <div class="container">
+                <h2>Workshop Overview</h2>
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <p>This workshop addresses a critical gap in current AI
+                            research by focusing on the integration of language
+                            and 3D perception, which is essential for developing
+                            embodied agents and robots, especially considering
+                            the recent rise of multimodal LLMs and
+                            vision-language-action (VLA) models.</p>
+                        <p>The workshop will explore challenges and
+                            opportunities in this area, providing a platform for
+                            researchers to share their work, discuss future
+                            directions, and foster collaboration across
+                            disciplines including robotics, computer vision,
+                            natural language processing, and human-computer
+                            interaction.</p>
+                    </div>
+                </div>
+                <div class="topics">
+                    <h3>Topics Include:</h3>
+                    <ul>
+                        <li>Integration of language and 3D perception</li>
+                        <li>Large language models (LLMs) for 3D environment
+                            understanding</li>
+                        <li>3D vision-language-action (VLA) models</li>
+                        <li>Embodied agents that integrate language, vision, and
+                            action</li>
+                        <li>3D scene understanding and generation with
+                            language</li>
+                        <li>Robot control and navigation using natural
+                            language</li>
+                        <li>Multimodal learning for embodied AI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Dates Section -->
+        <section id="dates" class="dates-section">
+            <div class="container">
+                <h2>Important Dates</h2>
+                <div class="dates-container">
+                    <div class="date-item">
+                        <div class="date-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="date-info">
+                            <h3>Paper Submission</h3>
+                            <p>April 20, 2025 (23:59)</p>
+                        </div>
+                    </div>
+
+                    <div class="date-item">
+                        <div class="date-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div class="date-info">
+                            <h3>Notification</h3>
+                            <p>May 7, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="date-item">
+                        <div class="date-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="date-info">
+                            <h3>Camera Ready</h3>
+                            <p>May 20, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="date-item">
+                        <div class="date-icon">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <div class="date-info">
+                            <h3>Workshop Date</h3>
+                            <p>June 11th or 12th, 2025 (TBD)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call for Papers Section -->
+        <section id="call" class="call-section">
+            <div class="container">
+                <h2>Call for Papers</h2>
+                <div class="paper-info">
+                    <h3>Overview</h3>
+                    <p>We invite submissions of papers related to the
+                        integration of language and 3D perception, with a focus
+                        on developing embodied agents and robots. Topics of
+                        interest include, but are not limited to:</p>
+
+                    <ul class="topics-list">
+                        <li>Language-guided 3D perception and understanding</li>
+                        <li>Large language models (LLMs) for 3D environment
+                            understanding</li>
+                        <li>3D vision-language-action (VLA) models</li>
+                        <li>Embodied agents that integrate language, vision, and
+                            action</li>
+                        <li>3D scene understanding and generation with
+                            language</li>
+                        <li>Robot control and navigation using natural
+                            language</li>
+                        <li>Multimodal learning for embodied AI</li>
+                        <li>Datasets and benchmarks for 3D-LLMs and 3D-VLAs</li>
+                        <li>Applications of 3D-LLMs and 3D-VLAs in real-world
+                            scenarios</li>
+                        <li>Ethical considerations in developing embodied AI
+                            systems</li>
+                    </ul>
+
+                    <h3>Submission Guidelines</h3>
+                    <p>Papers can be submitted in any major conference's format,
+                        with a length of 2-8 pages (excluding references). All
+                        submissions will be peer-reviewed, and accepted papers
+                        will be presented at the workshop either as oral
+                        presentations or posters.</p>
+
+                    <p>Submissions should be made through the <a
+                            href="https://openreview.net/group?id=thecvf.com/CVPR/2025/Workshop/3D-LLM_VLA"
+                            target="_blank">OpenReview submission
+                            system</a>.</p>
+
+                    <div class="submission-box">
+                        <h4>Important Dates</h4>
+                        <ul>
+                            <li><strong>Paper Submission Deadline:</strong>
+                                April 20, 2025 (23:59)</li>
+                            <li><strong>Decision Notification:</strong> May 7,
+                                2025</li>
+                            <li><strong>Camera Ready Deadline:</strong> May 20,
+                                2025</li>
+                            <li><strong>Workshop Date:</strong> June 11th or
+                                12th,
+                                2025 (TBD)</li>
+                        </ul>
+                    </div>
+
+                    <h3>Review Process</h3>
+                    <p>All submissions will undergo a double-blind review
+                        process. Please ensure that your submission does not
+                        contain any information that can identify the
+                        authors.</p>
+
+                    <h3>Publication</h3>
+                    <p>The workshop will be non-archival. Authors of accepted
+                        papers retain the full copyright of their work and are
+                        free to submit extended versions to conferences or
+                        journals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule-section">
+            <div class="container">
+                <h2>Schedule</h2>
+                <p>Full day workshop at CVPR 2025, Nashville, TN, USA</p>
+
+                <div class="schedule-note">
+                    <p><strong>Note:</strong> The schedule is tentative and
+                        subject to change. All times are in Central Daylight
+                        Time (CDT).</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">9:00 AM</div>
+                        <div class="event">
+                            <h3>Opening Remarks</h3>
+                            <p>Workshop organizers</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">9:10 AM</div>
+                        <div class="event">
+                            <h3>Invited Speaker 1: Prof. Jitendra Malik</h3>
+                            <p>UC Berkeley / Meta</p>
+                            <p class="talk-title">Vision, Robotics</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">9:50 AM</div>
+                        <div class="event">
+                            <h3>Invited Speaker 2: Prof. Angel X. Chang</h3>
+                            <p>Simon Fraser University</p>
+                            <p class="talk-title">Language and 3D Grounding</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">10:30 AM</div>
+                        <div class="event">
+                            <h3>Oral Session 1 (5 mins per talk)</h3>
+                            <ul>
+                                <li>Talk 1: Title of Paper 1</li>
+                                <li>Talk 2: Title of Paper 2</li>
+                                <li>Talk 3: Title of Paper 3</li>
+                                <li>Talk 4: Title of Paper 4</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">11:00 AM</div>
+                        <div class="event">
+                            <h3>Coffee Break</h3>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">11:10 AM</div>
+                        <div class="event">
+                            <h3>Invited Speaker 3: Prof. Dieter Fox</h3>
+                            <p>University of Washington / NVIDIA</p>
+                            <p class="talk-title">Robotics</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">11:50 AM</div>
+                        <div class="event">
+                            <h3>Lunch and Poster Session</h3>
+                            <p>Selected posters from submitted papers</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">1:30 PM</div>
+                        <div class="event">
+                            <h3>Invited Speaker 4: Prof. Katerina
+                                Fragkiadaki</h3>
+                            <p>Carnegie Mellon University</p>
+                            <p class="talk-title">Robotics</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">2:10 PM</div>
+                        <div class="event">
+                            <h3>Oral Session 2 (5 mins per talk)</h3>
+                            <ul>
+                                <li>Talk 5: Title of Paper 5</li>
+                                <li>Talk 6: Title of Paper 6</li>
+                                <li>Talk 7: Title of Paper 7</li>
+                                <li>Talk 8: Title of Paper 8</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">2:40 PM</div>
+                        <div class="event">
+                            <h3>Coffee Break</h3>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">2:50 PM</div>
+                        <div class="event">
+                            <h3>Invited Speaker 5: Dr. Siyuan Huang</h3>
+                            <p>BIGAI</p>
+                            <p class="talk-title">Language and 3D Grounding</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">3:30 PM</div>
+                        <div class="event">
+                            <h3>Invited Speaker 6: Dr. Yilun Du</h3>
+                            <p>Harvard University</p>
+                            <p class="talk-title">Generative AI, Embodied AI</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">4:10 PM</div>
+                        <div class="event">
+                            <h3>Invited Speaker 7: Dr. Andy Zeng</h3>
+                            <p>Google / Generalist AI</p>
+                            <p class="talk-title">Robotics</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">4:50 PM</div>
+                        <div class="event">
+                            <h3>Award and Closing Session</h3>
+                            <p>10 minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">5:00 PM</div>
+                        <div class="event">
+                            <h3>End of Workshop</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Section -->
+        <section id="speakers" class="speakers-section">
+            <div class="container">
+                <h2>Keynote Speakers</h2>
+                <p>Leading experts in 3D perception, language, and robotics</p>
+
+                <div class="speakers-grid full">
+                    <div class="speaker-card">
+                        <a href="https://people.eecs.berkeley.edu/~malik/"
+                            target="_blank">
+                            <img src="imgs/speakers/jitendra_malik.png"
+                                alt="Jitendra Malik">
+                            <div class="speaker-info">
+                                <h3>Jitendra Malik</h3>
+                                <p class="affiliation">UC Berkeley</p>
+                                <p class="topic">Vision, Robotics</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="speaker-card">
+                        <a href="https://homes.cs.washington.edu/~fox/"
+                            target="_blank">
+                            <img src="imgs/speakers/dieter_fox.png"
+                                alt="Dieter Fox">
+                            <div class="speaker-info">
+                                <h3>Dieter Fox</h3>
+                                <p class="affiliation">University of Washington
+                                    /
+                                    NVIDIA</p>
+                                <p class="topic">Robotics</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="speaker-card">
+                        <a href="https://www.cs.cmu.edu/~katef/"
+                            target="_blank">
+                            <img src="imgs/speakers/katerina_fragkiadaki.png"
+                                alt="Katerina Fragkiadaki">
+                            <div class="speaker-info">
+                                <h3>Katerina Fragkiadaki</h3>
+                                <p class="affiliation">Carnegie Mellon
+                                    University</p>
+                                <p class="topic">Robotics</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="speaker-card">
+                        <a href="https://angelxuanchang.github.io/"
+                            target="_blank">
+                            <img src="imgs/speakers/angel_chang.png"
+                                alt="Angel X. Chang">
+                            <div class="speaker-info">
+                                <h3>Angel X. Chang</h3>
+                                <p class="affiliation">Simon Fraser
+                                    University</p>
+                                <p class="topic">Language and 3D Grounding</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="speaker-card">
+                        <a href="https://siyuanhuang.com/" target="_blank">
+                            <img src="imgs/speakers/siyuan_huang.png"
+                                alt="Siyuan Huang">
+                            <div class="speaker-info">
+                                <h3>Siyuan Huang</h3>
+                                <p class="affiliation">BIGAI</p>
+                                <p class="topic">Language and 3D Grounding</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="speaker-card">
+                        <a href="https://yilundu.github.io/" target="_blank">
+                            <img src="imgs/speakers/yilun_du.png"
+                                alt="Yilun Du">
+                            <div class="speaker-info">
+                                <h3>Yilun Du</h3>
+                                <p class="affiliation">Harvard University</p>
+                                <p class="topic">Generative AI, Embodied AI</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="speaker-card">
+                        <a href="https://andyzeng.github.io/" target="_blank">
+                            <img src="imgs/speakers/andy_zeng.png"
+                                alt="Andy Zeng">
+                            <div class="speaker-info">
+                                <h3>Andy Zeng</h3>
+                                <p class="affiliation">Google / Generalist
+                                    AI</p>
+                                <p class="topic">Robotics</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizers Section -->
+        <section id="organizers" class="organizers-section">
+            <div class="container">
+                <h2>Organizing Committee</h2>
+                <p>Meet the team behind the 3D-LLM/VLA Workshop</p>
+
+                <div class="organizers-grid">
+                    <div class="organizer-card">
+                        <a href="https://jedyang.com/" target="_blank">
+                            <img src="imgs/organizers/jianing_yang.png"
+                                alt="Jianing Yang">
+                            <h3>Jianing Yang</h3>
+                            <p class="affiliation">University of Michigan</p>
+                        </a>
+                    </div>
+
+                    <div class="organizer-card">
+                        <a href="https://jasonqsy.github.io/" target="_blank">
+                            <img src="imgs/organizers/shengyi_qian.png"
+                                alt="Shengyi Qian">
+                            <h3>Shengyi Qian</h3>
+                            <p class="affiliation">Meta FAIR</p>
+                        </a>
+                    </div>
+
+                    <div class="organizer-card">
+                        <a href="https://evelinehong.github.io/"
+                            target="_blank">
+                            <img src="imgs/organizers/yining_hong.png"
+                                alt="Yining Hong">
+                            <h3>Yining Hong</h3>
+                            <p class="affiliation">University of California, Los
+                                Angeles</p>
+                        </a>
+                    </div>
+
+                    <div class="organizer-card">
+                        <a href="https://jeasinema.github.io/" target="_blank">
+                            <img src="imgs/organizers/xiaojian_ma.png"
+                                alt="Xiaojian Ma">
+                            <h3>Xiaojian Ma</h3>
+                            <p class="affiliation">University of California, Los
+                                Angeles</p>
+                        </a>
+                    </div>
+
+                    <div class="organizer-card">
+                        <a href="https://yashbhalgat.github.io/"
+                            target="_blank">
+                            <img src="imgs/organizers/yash_bhalgat.png"
+                                alt="Yash Bhalgat">
+                            <h3>Yash Bhalgat</h3>
+                            <p class="affiliation">University of Oxford</p>
+                        </a>
+                    </div>
+
+                    <div class="organizer-card">
+                        <a
+                            href="https://research.nvidia.com/person/valts-blukis"
+                            target="_blank">
+                            <img src="imgs/organizers/valts_blukis.png"
+                                alt="Valts Blukis">
+                            <h3>Valts Blukis</h3>
+                            <p class="affiliation">NVIDIA Research</p>
+                        </a>
+                    </div>
+
+                    <div class="organizer-card">
+                        <a
+                            href="https://scholar.google.de/citations?user=n9nXAPcAAAAJ&hl=en"
+                            target="_blank">
+                            <img src="imgs/organizers/iro_laina.png"
+                                alt="Iro Laina">
+                            <h3>Iro Laina</h3>
+                            <p class="affiliation">University of Oxford</p>
+                        </a>
+                    </div>
+
+                    <div class="organizer-card">
+                        <a href="https://web.eecs.umich.edu/~chaijy/"
+                            target="_blank">
+                            <img src="imgs/organizers/joyce_chai.png"
+                                alt="Joyce Chai">
+                            <h3>Joyce Chai</h3>
+                            <p class="affiliation">University of Michigan</p>
+                        </a>
+                    </div>
+
+                    <div class="organizer-card">
+                        <a href="https://cs.nyu.edu/~fouhey/" target="_blank">
+                            <img src="imgs/organizers/david_fouhey.png"
+                                alt="David Fouhey">
+                            <h3>David Fouhey</h3>
+                            <p class="affiliation">New York University</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions? We're here to help</p>
+
+                <div class="contact-info">
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="details">
+                                <h3>Email</h3>
+                                <p>For general inquiries:</p>
+                                <p><a
+                                        href="mailto:jianingy@umich.edu">jianingy@umich.edu</a></p>
+                                <p><a
+                                        href="mailto:syqain@meta.com">syqain@meta.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="details">
+                                <h3>Paper Submissions</h3>
+                                <p>Submit your papers via:</p>
+                                <p><a
+                                        href="https://openreview.net/group?id=thecvf.com/CVPR/2025/Workshop/3D-LLM_VLA"
+                                        target="_blank">OpenReview Submission
+                                        System</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="details">
+                                <h3>Workshop Location</h3>
+                                <p>CVPR 2025</p>
+                                <p>Nashville, TN, USA</p>
+                                <p>Exact venue details will be announced closer
+                                    to the event</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <h3>Frequently Asked Questions</h3>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h4>What is the paper submission deadline?</h4>
+                                <span class="toggle"><i
+                                        class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>The paper submission deadline is April 20,
+                                    2025 (23:59).</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h4>Is the workshop in-person or virtual?</h4>
+                                <span class="toggle"><i
+                                        class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>The workshop will be held in-person at CVPR
+                                    2025 in Nashville, TN, USA.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h4>Are the workshop papers archival?</h4>
+                                <span class="toggle"><i
+                                        class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>No, the workshop will be non-archival.
+                                    Authors of accepted papers retain the full
+                                    copyright of their work and are free to
+                                    submit extended versions to conferences or
+                                    journals.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h4>What is the maximum page length for
+                                    submissions?</h4>
+                                <span class="toggle"><i
+                                        class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Papers can be submitted in any major
+                                    conference's format, with a length of 2-8
+                                    pages (excluding references).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h3>3D-LLM/VLA Workshop</h3>
+                        <p>CVPR 2025 | Nashville, TN, USA</p>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#call">Call for Papers</a></li>
+                            <li><a href="#schedule">Schedule</a></li>
+                            <li><a href="#speakers">Speakers</a></li>
+                            <li><a href="#organizers">Organizers</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <p><strong>Contact:</strong></p>
+                        <p>Jianing Yang <a
+                                href="mailto:jianingy@umich.edu">jianingy@umich.edu</a></p>
+                        <p>Shengyi Qian <a
+                                href="mailto:syqain@meta.com">syqain@meta.com</a></p>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024-2025 3D-LLM/VLA Workshop. All rights
+                        reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
