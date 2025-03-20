@@ -262,17 +262,39 @@ nav ul li a.active::after {
 }
 
 .topics ul {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
 }
 
 .topics ul li {
-    background-color: var(--light-background);
-    padding: 15px;
-    border-radius: 6px;
-    border-left: 4px solid var(--primary-color);
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.topics ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.topics-list li,
+.submission-box li {
+    padding-left: 28px;
+    margin-bottom: 14px;
+}
+
+.topics-list li:before,
+.submission-box li:before {
+    background-color: var(--primary-color);
+    top: 8px;
 }
 
 /* Important Dates Section */
@@ -848,7 +870,186 @@ section>p {
 
 /* Schedule Section */
 .schedule-section {
-    padding: 60px 0;
+    background-color: var(--light-background);
+    padding: 70px 0;
+}
+
+.schedule-note {
+    background-color: rgba(37, 99, 235, 0.1);
+    border-left: 4px solid var(--primary-color);
+    padding: 15px 20px;
+    margin: 30px 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background: var(--primary-color);
+    left: 45px;
+    top: 0;
+    border-radius: 1.5px;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.time {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 15px 10px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+.event {
+    padding: 15px 20px;
+    flex: 1;
+}
+
+.event h3 {
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.event p {
+    color: var(--light-text);
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.event p:last-child {
+    margin-bottom: 0;
+}
+
+.talk-title {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Break indicator */
+.event h3:only-child {
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+/* Coffee break and special events */
+.timeline-item:nth-child(4) .time,
+.timeline-item:last-child .time {
+    background-color: var(--secondary-color);
+}
+
+/* Speaker photos in timeline */
+.event-with-photo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.speaker-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.event-details {
+    flex: 1;
+}
+
+/* ===== Improved Bullet Points in Call for Papers ===== */
+.paper-info ul,
+.topics ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.paper-info ul li,
+.topics ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.paper-info ul li:before,
+.topics ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.submission-box ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.submission-box ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.submission-box ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Additional styles for more compact submission box */
+.submission-box {
+    background-color: var(--light-background);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.submission-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 /* Speakers Section */
