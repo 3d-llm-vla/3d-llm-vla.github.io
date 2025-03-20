@@ -962,8 +962,14 @@ section>p {
 }
 
 /* Coffee break and special events */
-.timeline-item:nth-child(4) .time,
+.timeline-item:nth-child(6) .time,
+.timeline-item:nth-child(1) .time,
 .timeline-item:last-child .time {
+    background-color: var(--secondary-color);
+}
+
+/* For the poster session at the end (second to last item) */
+.timeline-item:nth-last-child(2) .time {
     background-color: var(--secondary-color);
 }
 
