@@ -823,7 +823,7 @@ footer {
 /* Fixed Header */
 .fixed-header {
     position: fixed;
-    top: 0;
+    top: 44px;
     left: 0;
     width: 100%;
     background-color: white;
@@ -839,7 +839,7 @@ section {
 
 /* First section (hero) needs more padding */
 #home {
-    padding-top: 150px;
+    padding-top: 180px;
 }
 
 /* Section styling */
@@ -1184,6 +1184,7 @@ nav ul li:nth-child(3) {
     display: flex;
     align-items: center;
     gap: 12px;
+    padding: 8px 0;
 }
 
 .logo-image {
@@ -1193,6 +1194,7 @@ nav ul li:nth-child(3) {
     object-fit: cover;
     background-color: transparent;
     mix-blend-mode: multiply;
+    flex-shrink: 0;
 }
 
 .logo-text {
@@ -1245,4 +1247,47 @@ nav ul li:nth-child(3) {
 .hero-logo-image:hover {
     transform: scale(1.05);
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+}
+
+.deadline-notice {
+    background-color: #ffd700;
+    color: #000;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+.deadline-notice p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.deadline-notice strong {
+    color: #d32f2f;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
+}
+
+del {
+    color: #666;
+    text-decoration: line-through;
 }
