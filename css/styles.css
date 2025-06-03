@@ -970,7 +970,7 @@ section>p {
 
 /* For the poster session at the end (second to last item) */
 .timeline-item:nth-last-child(2) .time {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 /* Speaker photos in timeline */
@@ -1290,4 +1290,105 @@ nav ul li:nth-child(3) {
 del {
     color: #666;
     text-decoration: line-through;
+}
+
+/* Papers Section Styles */
+.papers-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.papers-list {
+    margin-top: 40px;
+}
+
+.paper-item {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.paper-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.paper-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.paper-authors {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.paper-links {
+    margin-top: 12px;
+}
+
+.paper-links a {
+    display: inline-block;
+    margin-right: 16px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.paper-links a:hover {
+    text-decoration: underline;
+}
+
+.paper-info {
+    color: #666;
+    font-style: italic;
+}
+
+.papers-section .papers-list.compact {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.papers-section .papers-list.compact .paper-item {
+    margin-bottom: 0;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.papers-section .papers-list.compact .paper-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.papers-section .papers-list.compact .paper-title {
+    display: block;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.papers-section .papers-list.compact .paper-authors {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+    .papers-section .papers-list.compact {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+    }
 }
